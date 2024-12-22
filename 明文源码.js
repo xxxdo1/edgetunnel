@@ -1,13 +1,12 @@
-// <!--GAMFC-->version base on commit 5a112a0a0994b8bb834427ac84133501407f6413, time is 2024-10-11 04:49:19 UTC<!--GAMFC-END-->.
+// <!--GAMFC-->version base on commit 841ed4e9ff121dde0ed6a56ae800c2e6c4f66056, time is 2024-04-16 18:02:37 UTC<!--GAMFC-END-->.
 // @ts-ignore
 import { connect } from 'cloudflare:sockets';
 
 // How to generate your own UUID:
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
-let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
+let userID = '3ea71490-8516-45eb-ae2d-19284b1217dc';
 
-let proxyIP = '';
-
+let proxyIP = ''; // workers.cloudflare.cyou /bestproxy.onecf.eu.org /cdn-all.xn--b6gac.eu.org /cdn.xn--b6gac.eu.org /proxyip.fxxk.dedyn.io:443
 
 if (!isValidUUID(userID)) {
 	throw new Error('uuid is not valid');
@@ -628,4 +627,3 @@ clash-meta
 ################################################################
 `;
 }
-
