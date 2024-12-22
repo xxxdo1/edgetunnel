@@ -1,12 +1,7 @@
-// <!--GAMFC-->version base on commit 841ed4e9ff121dde0ed6a56ae800c2e6c4f66056, time is 2024-04-16 18:02:37 UTC<!--GAMFC-END-->.
-// @ts-ignore
+
 import { connect } from 'cloudflare:sockets';
-
-// How to generate your own UUID:
-// [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
 let userID = '3ea71490-8516-45eb-ae2d-19284b1217dc';
-
-let proxyIP = ''; // workers.cloudflare.cyou /bestproxy.onecf.eu.org /cdn-all.xn--b6gac.eu.org /cdn.xn--b6gac.eu.org /proxyip.fxxk.dedyn.io:443
+let proxyIP = 'cdn.xn--b6gac.eu.org';
 
 if (!isValidUUID(userID)) {
 	throw new Error('uuid is not valid');
@@ -609,20 +604,9 @@ ${vlessMain}
 ################################################################
 clash-meta
 ---------------------------------------------------------------
-- type: vless
-  name: ${hostName}
-  server: ${hostName}
-  port: 443
-  uuid: ${userID}
-  network: ws
-  tls: true
-  udp: false
-  sni: ${hostName}
-  client-fingerprint: chrome
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      host: ${hostName}
+proxies:
+  - {name: My01, server: 104.26.5.171, port: 443, type: vless, uuid: ${userID}, tls: true, tfo: false, skip-cert-verify: true, servername: ${hostName}, client-fingerprint: random, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ${hostName}}}}
+ 
 ---------------------------------------------------------------
 ################################################################
 `;
