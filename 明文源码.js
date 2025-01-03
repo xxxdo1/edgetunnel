@@ -302,7 +302,7 @@ async function remoteSocketToWS(remoteSocket, webSocket, retry, log) {
 
 function isValidSHA224(hash) {
   const sha224Regex = /^[0-9a-f]{8}-[0-9a-f]{4}-[4][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
-  return sha224Regex.test(uuid)
+  return sha224Regex.test(hash)
   // const sha224Regex = /^[0-9a-f]{56}$/i
   // return sha224Regex.test(hash)
 }
